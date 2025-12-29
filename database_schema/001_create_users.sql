@@ -1,5 +1,5 @@
 
-CREATE TABLE Users (
+CREATE TABLE users (
     -- Primary Identity
     uid UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     

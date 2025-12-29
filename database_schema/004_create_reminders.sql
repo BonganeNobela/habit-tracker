@@ -1,11 +1,11 @@
-CREATE TABLE Reminders (
+CREATE TABLE reminders (
   --Primary identifier
   rid UUID PRIMARY KEY
   DEFAULT gen_random_uuid(),
   
   -- Foreign keys
-  hid UUID NOT NULL REFERENCES Habits(hid) ON DELETE CASCADE,
-  sid UUID NOT NULL REFERENCES Schedules(sid) ON DELETE CASCADE, 
+  hid UUID NOT NULL REFERENCES habits(hid) ON DELETE CASCADE,
+  sid UUID NOT NULL REFERENCES schedules(sid) ON DELETE CASCADE, 
   
   --Reminder details
   reminder_time TIME NOT NULL,

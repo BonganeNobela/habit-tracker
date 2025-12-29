@@ -1,12 +1,12 @@
 -- Table for scheduling habits
 
-CREATE TABLE Schedules (
+CREATE TABLE schedules (
   -- Primary identifier
   sid UUID PRIMARY KEY
   DEFAULT gen_random_uuid(),
   
   --Foreign key
-  hid UUID REFERENCES Habits(hid) ON DELETE CASCADE,
+  hid UUID REFERENCES habits(hid) ON DELETE CASCADE,
   
   -- Schedule Info
   -- day of the week

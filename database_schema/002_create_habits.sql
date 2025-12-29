@@ -1,10 +1,10 @@
 --Table for habits
-CREATE TABLE Habits (
+CREATE TABLE habits (
   -- Primary identifier
   hid UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   
   -- Foreign key
-  uid UUID REFERENCES Users(uid) ON DELETE CASCADE,
+  uid UUID REFERENCES users(uid) ON DELETE CASCADE,
   
   -- Name of the habit
   name VARCHAR(50) NOT NULL,
